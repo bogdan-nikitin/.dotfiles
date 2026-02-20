@@ -42,7 +42,6 @@ set bg=dark
 
 " Кодировка
 set fileencoding=utf-8
-set termencoding=utf-8
 " На Windows с такой кодировкой появляются кракозябры при исполнении внешних 
 " команд
 set encoding=utf-8
@@ -159,6 +158,7 @@ augroup END
 autocmd BufNewFile,BufRead *.ll :set filetype=llvm
 
 if !has('nvim')
+set termencoding=utf-8
 if executable("ranger")
     function! RangeChooser()
         let temp = tempname()
